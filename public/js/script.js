@@ -1,4 +1,16 @@
 // Drum Arrays
+
+function createDrum(){
+  let newDrum = [];
+  
+  for (i = 1, i <= 16, i++){
+    newDrum.push(false);
+  }
+  return newDrum;
+}
+
+const kicks = createDrum()
+
 let kicks = [false,false,false,false,false,false,false,false,false,false,false,false,false,
   false,false,false];
 let snares = [false,false,false,false,false,false,false,false,false,false,false,false,false,
@@ -37,12 +49,16 @@ function clear(drumArray){
 }
 
 function invert(drumArray){
-   drumArray.forEach(function(element){
+  for(i = 1; i < drumArray.length; i++){
+    if(drumArray[i] === false){
+        drumArray.push[i] = true;
+  } drumArray.push[i] = false;
+  
+  /*this code changes the array while iterating it...not a good idea
+  drumArray.forEach(function(element){
       if(element === false){
         drumArray.push[indexNum] = true;
       }
         drumArray.push[indexNum] = false;
-      }
-    return                   
-   )
+   })*/
 }
