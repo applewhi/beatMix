@@ -35,3 +35,14 @@ function clear(drumArray){
       }
   )
 }
+
+function invert(drumArray){
+   drumArray.forEach(function(element){
+      if(element === false){
+        drumArray.push[indexNum] = true;
+      }
+        drumArray.push[indexNum] = false;
+      }
+    return                   
+   )
+}
