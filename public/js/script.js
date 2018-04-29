@@ -43,7 +43,7 @@ function clear(drumArray){
 }
 
 function invert(drumArray){
-  for(i = 1; i < drumArray.length; i++){
+  for(i = 0; i < drumArray.length; i++){
     if(drumArray[i] === false){
         drumArray.push[i] = true;
   } drumArray.push[i] = false;
