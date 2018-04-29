@@ -44,9 +44,7 @@ function clear(drumArray){
 
 function invert(drumArray){
   for(i = 0; i < drumArray.length; i++){
-    if(drumArray[i] === false){
-        drumArray.push[i] = true;
-  } drumArray.push[i] = false;
+    drumArray[i] = !drumArray[i];
   
   /*this code changes the array while iterating it...not a good idea
   drumArray.forEach(function(element){
