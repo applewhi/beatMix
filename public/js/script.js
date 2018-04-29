@@ -48,3 +48,29 @@ function invert(drumArray){
         drumArray.push[indexNum] = false;
    })*/
 }
+
+const getNeighborPads = (x, y, size){
+  
+  let top = [x,y+1],
+      right = [x+1,y],
+      bottom = [x,y-1],
+      left = [x-1,y],
+      neighborArray = [];
+  
+  if(x-1 > 0){
+    neighborArray.push(left);
+  }
+  
+  if(y-1 > 0){
+    neighborArray.push(bottom);
+  }
+  
+  if(x + 1 < size){
+    neighborArray.push(right);
+  }
+  
+  if(y + 1 < size){
+    neighborArray.push(top);
+  }
+  return neighborArray;
+}
