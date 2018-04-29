@@ -20,10 +20,10 @@ const presetHandler = (requestMethodType,indexForPresetArray, newPresetArray) =>
   //else request method type is a valid one (GET or PUT)
   let found = [200];
   if(requestMethodType === 'GET'){
-    return found[1].push(presets[indexForPresetArray]);
+    return found.push(presets[indexForPresetArray]);
   } //else requestMethodType = PUT
   presets[indexForPresetArray].push(newPresetArray);
-  return found[1].push(newPresetArray);
+  return found.push(newPresetArray);
 };
 
 // Leave this line so that your presetHandler function can be used elsewhere:
