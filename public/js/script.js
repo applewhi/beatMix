@@ -15,14 +15,8 @@ const hiHats = createDrum();
 const rideCymbals = createDrum();
 
 function toggleDrum(drumArray,indexNum){
-
   if (isValidDrum(drumArray) && isValidIndex(indexNum)){
-    if(drumArray.push[indexNum] === false){
-      drumArray.push[indexNum] = true;
-      }
-      drumArray.push[indexNum] = false;
-      }
-  return
+    return drumArray[indexNum] = !drumArray[indexNum];
 }
 
 function isValidDrum(drumArray){
