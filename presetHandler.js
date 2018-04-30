@@ -5,25 +5,19 @@ const presets = require('./presets');
 // Complete this function:
 const presetHandler = (requestMethodType,indexForPresetArray, newPresetArray) => {
  
-  //possibly should consolidate the various array declarations/variables (e.g., notFound, found,
-  //and badRequest) of presetHandler() by creating one here.
-  
   if(indexForPresetArray < 0 || indexForPresetArray >= presets.length || !Math.isInteger(indexForPresetArray)){
-    return let notFound = [404];
+    return [404];
   }
   else if {
             if (requestMethodType !== 'GET' && requestMethodType !== 'PUT'){
-              let badRequest = [400];
-              return badRequest;
+              return [400];
             }
           }
   //else request method type is a valid one (GET or PUT)
-  let found = [200];
   if(requestMethodType === 'GET'){
-    return found.push(presets[indexForPresetArray]);
+    return [200,presets[indexForPresetArray]];
   } //else requestMethodType = PUT
-  presets[indexForPresetArray].push(newPresetArray);
-  return found.push(newPresetArray);
+  return [200,presets[indexForPresetArray].push(newPresetArray)];
 };
 
 // Leave this line so that your presetHandler function can be used elsewhere:
