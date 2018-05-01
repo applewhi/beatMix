@@ -3,7 +3,7 @@
 function createDrum(){
   let newDrum = [];
   
-  for (i = 1, i <= 16, i++){
+  for (i = 1; i <= 16; i++){
     newDrum.push(false);
   }
   return newDrum;
