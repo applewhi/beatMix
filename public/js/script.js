@@ -65,11 +65,11 @@ const getNeighborPads = (x, y, size){
     neighborArray.push(bottom);
   }
   
-  if(x + 1 < size){
+  if(x + 1 <= size){
     neighborArray.push(right);
   }
   
-  if(y + 1 < size){
+  if(y + 1 <= size){
     neighborArray.push(top);
   }
   return neighborArray;
