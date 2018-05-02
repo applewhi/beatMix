@@ -30,11 +30,13 @@ function isValidIndex(indexNum){
 }
 
 function clear(drumArray){
-  drumArray.forEach(
+  drumArray.fill(false);
+  
+  /*drumArray.forEach(
       function(indexNum){
         index = false;
       }
-  )
+  )*/
 }
 
 function invert(drumArray){
