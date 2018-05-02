@@ -17,6 +17,7 @@ const rideCymbals = createDrum();
 function toggleDrum(drumArray,indexNum){
   if (isValidDrum(drumArray) && isValidIndex(indexNum)){
     return drumArray[indexNum] = !drumArray[indexNum];
+  }
 }
 
 function isValidDrum(drumArray){
