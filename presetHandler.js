@@ -25,7 +25,7 @@ const presetHandler = (requestMethodType,indexForPresetArray, newPresetArray) =>
 
         case 'PUT':
         presets[indexForPresetArray] = newPresetArray;
-        return [200,presets];
+        return [200,presets[newPresetArray]];
 
         default: //not GET or PUT
         return [400];
