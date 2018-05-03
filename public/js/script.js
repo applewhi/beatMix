@@ -49,7 +49,7 @@ function isValidIndex(indexNum){
 
 function clear(drumArray){
   if (isValidDrum(drumArray)){
-    
+
   switch (drumArray){
   case 'kicks':
   for (i = 0; i < kicks.length; i++){
@@ -57,7 +57,7 @@ function clear(drumArray){
   }
   break;
 
-  case 'snares':       
+  case 'snares':
   for (i = 0; i < snares.length; i++){
     snares[i] = false;
    }
@@ -74,62 +74,63 @@ function clear(drumArray){
     rideCymbals[i] = false;
   }
   break;
-      
+
  }
   } return;
 }
 
 function invert(drumArrayString){
-  
+
   switch (drumArrayString){
-    case 'kicks:
+    case 'kicks':
     for(i = 0; i < kicks.length; i++){
-      kicks[i] = !kicks[i] 
+      kicks[i] = !kicks[i]
     }
     break;
-   
+
     case 'snares':
     for(i = 0; i < snares.length; i++){
-      snares[i] = !snares[i] 
+      snares[i] = !snares[i]
     }
     break;
-    
-    case 'rideCymbals:
+
+    case 'rideCymbals':
     for(i = 0; i < rideCymbals.length; i++){
-      rideCymbals[i] = !rideCymbals[i] 
+      rideCymbals[i] = !rideCymbals[i]
     }
     break;
-      
-    case 'hiHats:
+
+    case 'hiHats':
     for(i = 0; i < hiHats.length; i++){
-      hiHats[i] = !hiHats[i] 
+      hiHats[i] = !hiHats[i]
     }
     break;
  }
 }
 
 function getNeighborPads(x, y, size){
-
   let top = [x,y+1],
       right = [x+1,y],
       bottom = [x,y-1],
       left = [x-1,y],
       neighborArray = [];
 
-  if(x-1 > 0){
-    neighborArray.push(left);
-  }
+  if ( x < 0 || x > size || y < 0 || y > size ){
+    return neighborArray;
+  } else {
 
-  if(y-1 > 0){
-    neighborArray.push(bottom);
+    if(x-1 > 0){
+      neighborArray.push(left);
+    }
+    if(y-1 > 0){
+      neighborArray.push(bottom);
+    }
+    if(x + 1 <= size){
+      neighborArray.push(right);
+    }
+    if(y + 1 <= size){
+      neighborArray.push(top);
+    }
+    return console.log(`>>>>>>>>>> ${neighborArray}`);
   }
-
-  if(x + 1 <= size){
-    neighborArray.push(right);
-  }
-
-  if(y + 1 <= size){
-    neighborArray.push(top);
-  }
-  return neighborArray;
 }
