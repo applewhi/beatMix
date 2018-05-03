@@ -48,7 +48,8 @@ function isValidIndex(indexNum){
 }
 
 function clear(drumArray){
-  
+  if (isValidDrum(drumArray)){
+    
   switch (drumArray){
   case 'kicks':
   for (i = 0; i < kicks.length; i++){
@@ -56,34 +57,34 @@ function clear(drumArray){
   }
   break;
 
-    case 'snares':       
-      for (i = 0; i < snares.length; i++){
-          snares[i] = false;
-        }
-        break;
+  case 'snares':       
+  for (i = 0; i < snares.length; i++){
+    snares[i] = false;
+   }
+   break;
 
-    case 'hiHats':
-        for (i = 0; i < hiHats.length; i++){
-          hiHats[i] = false;
-        }
-        break;
+  case 'hiHats':
+  for (i = 0; i < hiHats.length; i++){
+    hiHats[i] = false;
+  }
+  break;
 
-        case 'rideCymbals':
-        for (i = 0; i < rideCymbals.length; i++){
-          rideCymbals[i] = false;
-        }
-        break;
+  case 'rideCymbals':
+  for (i = 0; i < rideCymbals.length; i++){
+    rideCymbals[i] = false;
+  }
+  break;
       
-        default: 
-        return;
-      }
+ }
+  } return;
 }
+
 function invert(drumArrayString){
   
   switch (drumArrayString){
     case 'kicks:
     for(i = 0; i < kicks.length; i++){
-      kicks[i] = !kics[i] 
+      kicks[i] = !kicks[i] 
     }
     break;
    
@@ -93,12 +94,17 @@ function invert(drumArrayString){
     }
     break;
     
-    case 'kicks:
-    for(i = 0; i < kicks.length; i++){
-      kicks[i] = !kics[i] 
+    case 'rideCymbals:
+    for(i = 0; i < rideCymbals.length; i++){
+      rideCymbals[i] = !rideCymbals[i] 
     }
     break;
       
+    case 'hiHats:
+    for(i = 0; i < hiHats.length; i++){
+      hiHats[i] = !hiHats[i] 
+    }
+    break;
  }
 }
 
